@@ -1,6 +1,7 @@
 package Game;
 
 import java.awt.*;
+import java.util.Random;
 
 public class GameTile {
 
@@ -71,12 +72,24 @@ public class GameTile {
         g.fillRect(tileX, tileY, this.tileSize, this.tileSize);
     }
 
+    //Чертаене на решетката
     void boardGrid(Graphics g) {
         g.setColor(Color.black);
         for (int i = 0; i <= 660; i += 100) {
-            for (int j = 0; j <= 7000; j += 100) {
+            for (int j = 0; j <= 700; j += 100) {
                 g.drawRect(i, j, 100, 100);
             }
         }
     }
+    
+        //Непроходими полета
+    private int randTiles() {
+        Random random = new Random();
+        int rand = random.nextInt(7);
+        while (rand == 2) {
+            rand = random.nextInt(7);
+        }
+        return rand;
+    }
+
 }
