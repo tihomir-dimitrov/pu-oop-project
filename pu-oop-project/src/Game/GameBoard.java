@@ -3,6 +3,7 @@ package Game;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import Pieces.Dwarf;
 
 public class GameBoard extends JFrame {
     private ArrayList<Object> pieces;
@@ -23,7 +24,13 @@ public class GameBoard extends JFrame {
 
                 GameTile tile = new GameTile(row, col);
                 tile.render(g);
+                tile.Green(g);
+                tile.Grey(g);
+                tile.BlockedTile(g);
                 tile.boardGrid(g);
+
+                Dwarf d1 = new Dwarf(row, col);
+                d1.DwarfPiece(g);
             }
         }
     }
