@@ -27,9 +27,16 @@ public class Dwarf extends JFrame{
 
         int dp1 = RandPiece();
         int dp2 = RandPiece();
+        int dp3 = RandPiece();
+        int dp4 = RandPiece();
 
         g.setColor(Color.RED);
         g.fillOval((dp1*100)+10, 15, 65, 65);
         g.fillOval((dp2*100)+10, 115, 65, 65);
+      
+      
+        g.setColor(Color.RED);
+        g.fillOval((dp3*100)+10,515 , 65, 65);
+        g.fillOval((dp4*100)+10, 615, 65, 65);
     }
 }
