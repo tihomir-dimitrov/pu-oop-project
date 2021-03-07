@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import Pieces.Dwarf;
+import Pieces.Elf;
+import Pieces.Knight;
 
 public class GameBoard extends JFrame {
     private ArrayList<Object> pieces;
@@ -31,6 +33,12 @@ public class GameBoard extends JFrame {
 
                 Dwarf d1 = new Dwarf(row, col);
                 d1.DwarfPiece(g);
+                
+                Elf e1 = new Elf(row,col);
+                e1.ElfPiece(g);
+
+                Knight k1 = new Knight(row,col);
+                k1.KnightPiece(g);
             }
         }
     }
